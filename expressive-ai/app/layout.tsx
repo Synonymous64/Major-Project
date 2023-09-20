@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Expressive AI",
   description: "Your one and only AI Companion",
+  openGraph:{
+    images: '/front.png'
+  }
 };
 
 export default function RootLayout({
