@@ -5,15 +5,17 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
+import { ProModal } from "@/components/pro-modal";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Expressive AI",
-  description: "Your one and only AI Companion",
-  openGraph:{
-    images: '/front.png'
-  }
+  description: "Your one and only AI Character",
+  openGraph: {
+    images: "/front.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +28,9 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={cn("bg-secondary", inter.className)}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ProModal />
             {children}
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>

@@ -17,16 +17,16 @@ export const LandingNavbar = () => {
     <nav className="p-4 bg-transparent flex items-center justify-between">
       <Link href="/" className="flex items-center">
         <div className="relative h-8 w-8 mr-4">
-          <Image fill alt="Logo" src="/logo.png" />
+          <Image fill alt="logo2" src="/logo2.png" />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
           Prodigy
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+        <Link href="https://github.com/Synonymous64/Major-Project/tree/master/next13-ai-saas-master">
           <Button variant="outline" className="rounded-full">
-            Get Started
+            Get Code on Github
           </Button>
         </Link>
       </div>
